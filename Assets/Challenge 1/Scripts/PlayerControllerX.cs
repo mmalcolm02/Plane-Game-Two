@@ -22,10 +22,10 @@ public class PlayerControllerX : MonoBehaviour
         // get the user's vertical input
         verticalInput = Input.GetAxis("Vertical");
 
-        // move the plane forward at a constant rate
+        // move the plane forward at a constant rate fixed Vector to move plane forwards
         transform.Translate(Vector3.forward * speed);
 
-        // tilt the plane up/down based on up/down arrow keys - vertical input used for interactivity
+        // tilt the plane up/down based on up/down arrow keys - vertical input inserted for interactivity
         transform.Rotate(Vector3.right, verticalInput * rotationSpeed * Time.deltaTime);
     }
 }
